@@ -20,14 +20,10 @@ fun main() {
     println(conta02.numero)
     println(conta02.saldo)
 
+    conta01.saldo += 50.00
 
-    val conta3 = Conta()
-    conta3.titular = "João"
-    var contaMaria = conta3
-    contaMaria.titular = "Maria"
 
-    println(conta3.titular)
-    println(contaMaria.titular)
+
 
 }
 
@@ -35,11 +31,6 @@ class Conta{
     var titular = ""
     var numero = 0
     var saldo = 0.0
-
-
-
-
-
 }
 
 fun testaConta(){
@@ -89,4 +80,20 @@ fun geradorCFor() {
         println(i)
 }
 
+fun testaCopiasEReferencias {
+    val numerox = 10
+    var numeroy = numerox
+    numeroy++
 
+    println("numeroX $numerox")
+    println("numeroY $numeroy")
+
+
+    val conta3 = Conta()
+    conta3.titular = "João"
+    var contaMaria = conta3
+    contaMaria.titular = "Maria"
+
+    println(conta3.titular)
+    println(contaMaria.titular)
+}
